@@ -15,10 +15,10 @@ public class Ejercicio2 {
 			while (f.hasNextLine()) {
 				String linea = f.nextLine();
 				linea = linea.replaceAll(",", " ").replaceAll("\\.", " ").replaceAll(":", " ");
-				String[] lineaspearada = linea.split(" ");
-				for (int i = 0; i < lineaspearada.length; i++) {
-					if (lineaspearada[i].length() > longitud) {
-						System.out.println(lineaspearada[i]);
+				String[] lineacompleta = linea.split(" ");
+				for (int i = 0; i < lineacompleta.length; i++) {
+					if (lineacompleta[i].length() > longitud) {
+						System.out.println(lineacompleta[i]);
 						contador++;
 					}
 				}
