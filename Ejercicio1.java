@@ -14,10 +14,23 @@ public class Ejercicio1 {
 		return porteria;
 	}
 	
-	public static void main(String[] args) {
-		ArrayList<String> pla = informacionVideojuegos();
-		for(int i = 0; i < pla.size(); i++) {
-			System.out.println(pla.get(i));
+	public static ArrayList<Jugador> generadorJugadores(int N) {
+		ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
+		for (int i = 0; i < N; i++) {
+			Jugador jugador = new Jugador("Jugador " + i, i + 1, habilidadDisparo(), habilidadPorteria());
+			jugadores.add((int) Math.floor(Math.random() * 2) , jugador);
 		}
+		return jugadores;
+	}
+	
+	public static void main(String[] args) {
+		ArrayList<Jugador> base = generadorJugadores(10);
+		ArrayList<Jugador> escribir = new ArrayList<Jugador>();
+		for(int i = 0; i < base.size(); i++) {
+			System.out.println(base.get(i));
+		}
+			if(base.get(0).getCalidadPorteria() < base.get(1).getPotenciaDisparo()) {
+				base.get(0).setVidas(base.get(0).getVidas()-1);
+			}
 	}
 }

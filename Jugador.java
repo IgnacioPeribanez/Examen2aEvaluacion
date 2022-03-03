@@ -7,14 +7,14 @@ public class Jugador {
 	protected int CalidadPorteria;
 	protected int Vidas;
 	
-	public Jugador(String Nombre, int Dorsal, int PotenciaDisparo, int CalidadPorteria, int Vidas) {
+	public Jugador(String Nombre, int Dorsal, int PotenciaDisparo, int CalidadPorteria) {
 		this.Nombre = Nombre;
 		this.Dorsal = Dorsal;
 		this.PotenciaDisparo = PotenciaDisparo;
 		this.CalidadPorteria = CalidadPorteria;
 		this.Vidas = 2;
 	}
-	
+
 	public String getNombre() {
 		return Nombre;
 	}
